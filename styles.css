@@ -1,67 +1,66 @@
 /* Body styling */
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 95vh;
-  width: 204vh;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #2F2F2F; /* Dark background */
-  color: #F6F6F6; /* Light text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2F2F2F; /* Dark background */
+    color: #F6F6F6; /* Light text */
 }
 
 /* Header styling */
 header {
-  text-align: center;
-  padding: 21px;
-  background-color: #111111; /* Dark header background */
-  color: #FFCB74; /* Accent color for header text */
-  width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #111111; /* Dark header background */
+    color: #FFCB74; /* Accent color for header text */
+    width: 100%;
 }
 
 /* Container styling */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 /* Round Button styling */
 button {
-  padding: 15px 30px;
-  margin: 20px;
-  border: none;
-  border-radius: 50%; /* Make the button round */
-  background-color: #FFCB74; /* Accent color for buttons */
-  color: #2F2F2F; /* Dark text on light background */
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  width: 200px; /* Set fixed width for button */
-  height: 200px; /* Set fixed height for button */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
+    padding: 15px 30px;
+    margin: 20px;
+    border: none;
+    border-radius: 50%; /* Make the button round */
+    background-color: #FFCB74; /* Accent color for buttons */
+    color: #2F2F2F; /* Dark text on light background */
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 200px; /* Set fixed width for button */
+    height: 200px; /* Set fixed height for button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 }
 
 button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 button:hover {
-  transform: scale(1.1); /* Scale up on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
 }
 
 /* Message styling */
 #message {
-  font-size: 18px;
-  color: #F6F6F6; /* Light text */
+    font-size: 18px;
+    color: #F6F6F6; /* Light text */
 }
