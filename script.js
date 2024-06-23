@@ -20,7 +20,7 @@ function startGame() {
 
         // Enable vibration if supported
         if (navigator.vibrate) {
-            navigator.vibrate([500]); // Vibrate pattern
+            navigator.vibrate([1000]); // Vibrate pattern
         }
 
         startTime = new Date().getTime();
