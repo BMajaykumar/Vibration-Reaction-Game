@@ -1,66 +1,153 @@
 /* Body styling */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #2F2F2F; /* Dark background */
-    color: #F6F6F6; /* Light text */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #2F2F2F; /* Dark background */
+  color: #F6F6F6; /* Light text */
+  padding: 0 20px; /* Add padding for smaller screens */
 }
 
 /* Header styling */
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #111111; /* Dark header background */
-    color: #FFCB74; /* Accent color for header text */
-    width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #111111; /* Dark header background */
+  color: #FFCB74; /* Accent color for header text */
+  width: 100%;
 }
 
 /* Container styling */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px; /* Limit max width for large screens */
 }
 
-/* Round Button styling */
-button {
-    padding: 15px 30px;
-    margin: 20px;
-    border: none;
-    border-radius: 50%; /* Make the button round */
-    background-color: #FFCB74; /* Accent color for buttons */
-    color: #2F2F2F; /* Dark text on light background */
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    width: 200px; /* Set fixed width for button */
-    height: 200px; /* Set fixed height for button */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
+/* Start Game Button styling */
+.start-button {
+  padding: 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 50%; /* Make the button round */
+  background-color: #FFCB74; /* Accent color for buttons */
+  color: #2F2F2F; /* Dark text on light background */
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 200px; /* Set fixed width for button */
+  height: 200px; /* Set fixed height for button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+.start-button:hover {
+  background-color: #FFCB74; /* Background color on hover */
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
 }
 
-button:hover {
-    transform: scale(1.1); /* Scale up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+/* Round React Button styling */
+#reactionButton {
+  padding: 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 50%; /* Make the button round */
+  background-color: #FFCB74; /* Accent color for buttons */
+  color: #2F2F2F; /* Dark text on light background */
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 200px; /* Set fixed width for button */
+  height: 200px; /* Set fixed height for button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+#reactionButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#reactionButton:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
 }
 
 /* Message styling */
 #message {
+  font-size: 18px;
+  color: #F6F6F6; /* Light text */
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Add margin for spacing */
+}
+
+/* Media Queries */
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  #reactionButton {
+    width: 150px; /* Smaller width */
+    height: 150px; /* Smaller height */
+    font-size: 20px; /* Smaller font size */
+  }
+
+  #message {
+    font-size: 16px; /* Smaller font size */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .start-button {
+    padding: 12px 24px;
     font-size: 18px;
-    color: #F6F6F6; /* Light text */
+  }
+
+  #reactionButton {
+    width: 180px; /* Medium width */
+    height: 180px; /* Medium height */
+    font-size: 22px; /* Medium font size */
+  }
+
+  #message {
+    font-size: 17px; /* Medium font size */
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+  .start-button {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+
+  #reactionButton {
+    width: 200px; /* Default width */
+    height: 200px; /* Default height */
+    font-size: 24px; /* Default font size */
+  }
+
+  #message {
+    font-size: 18px; /* Default font size */
+  }
 }

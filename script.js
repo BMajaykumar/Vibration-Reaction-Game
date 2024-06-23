@@ -20,7 +20,7 @@ function startGame() {
 
         // Enable vibration if supported
         if (navigator.vibrate) {
-            navigator.vibrate([200, 100, 200]); // Vibrate pattern
+            navigator.vibrate([500]); // Vibrate pattern
         }
 
         startTime = new Date().getTime();
@@ -41,13 +41,13 @@ function react() {
     const reactionTime = new Date().getTime() - startTime;
 
     // Display reaction time message based on reaction time
-    if (reactionTime < 50) {
+    if (reactionTime < 100) {
         message.textContent = `🚀 Superhuman reaction! (${reactionTime} ms)`;
-    } else if (reactionTime < 200) {
+    } else if (reactionTime < 250) {
         message.textContent = `👍 Excellent reaction! (${reactionTime} ms)`;
     } else if (reactionTime < 500) {
         message.textContent = `🎉 Good reaction! (${reactionTime} ms)`;
-    } else {
+    } else if (reactionTime < 1000) {
         message.textContent = `😅 Slow reaction... (${reactionTime} ms)`;
     }
 
