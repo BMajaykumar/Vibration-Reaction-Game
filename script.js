@@ -49,6 +49,8 @@ function react() {
         message.textContent = `🎉 Good reaction! (${reactionTime} ms)`;
     } else if (reactionTime < 1000) {
         message.textContent = `😅 Slow reaction... (${reactionTime} ms)`;
+    } else {
+        message.textContent = `😒 Try agin...)`;
     }
 
     // Enable start button again
