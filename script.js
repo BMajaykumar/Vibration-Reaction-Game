@@ -47,7 +47,7 @@ function react() {
         message.textContent = `👍 Excellent reaction! (${reactionTime} ms)`;
     } else if (reactionTime < 500) {
         message.textContent = `🎉 Good reaction! (${reactionTime} ms)`;
-    } else if (reactionTime < 1000) {
+    } else if (reactionTime <= 1000) {
         message.textContent = `😅 Slow reaction... (${reactionTime} ms)`;
     }
 
